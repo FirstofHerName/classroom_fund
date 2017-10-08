@@ -1,0 +1,17 @@
+<% if @errors %>
+
+<% @errors.each do |error| %>
+<h2><%= error %></h2>
+<% end %>
+<% end %>
+
+
+<h1>Edit a classroom</h1>
+
+<%= form_tag "/classrooms/#{@classroom.id}", method: :patch do %>
+  <div>Teacher Name: <input type="text" name="name" value="<%= @classroom.teacher_name %>">
+    </div>
+  <div>Room Number: <input type="text" name="Room" value="<%= @classroom.room_number %>">
+    </div>
+    <input type="submit" value="Update Room" class="btn btn-Changes Saved">
+  <% end %>

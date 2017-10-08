@@ -1,0 +1,12 @@
+<h1>Add a your classroom</h1>
+
+<%= form_tag "/classrooms", method: "post" do %>
+  <div>
+    Teacher Name: <input type="text" name="teacher_name">
+  </div>
+  <div>
+    Room Number: <input type="text" name="room_number">
+  </div>
+  
+  <input type="submit" class="btn btn-success" value="Create New Classroom">
+<% end %>

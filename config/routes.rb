@@ -6,16 +6,21 @@ Rails.application.routes.draw do
   get '/schools/:id' => 'schools#show'
   get '/schools/:id/edit' => 'schools#edit'
   patch '/schools/:id' => 'schools#update'
-  delete '/schools/:id' => 'schools#destroy'
 
-  # get '/classrooms' => 'classroom#index'
-  # get '/classrooms/new' => 'classroom#new'
-  # post '/classrooms' => 'classroom#create'
-  # get '/classrooms/:id' => 'classroom#show'
-  # get '/classrooms/:id/edit' => 'classroom#edit'
-  # patch '/classrooms/:id' => 'classroom#update'
-  # delete '/classrooms/:id' => 'classroom#destroy'
+  get '/classrooms' => 'classrooms#index'
+  get '/classrooms/new' => 'classrooms#new'
+  post '/classrooms' => 'classrooms#create'
+  get '/classrooms/:id' => 'classrooms#show'
+  get '/classrooms/:id/edit' => 'classrooms#edit'
+  patch '/classrooms/:id' => 'classrooms#update'
+  delete '/classrooms/:id' => 'classrooms#destroy'
 
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   
 
 

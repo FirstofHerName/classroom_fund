@@ -1,13 +1,17 @@
-<h1> List of Schools </h1>
+<a href="#">
+  <h1>School List</h1>
+
+<% @schools.each do |school| %>
+  <h2>Name: <a href="/schools/<%= school.id %>"><%= school.name %></a></h2>
+
+ <% end %>
 
 
-<li>ACE TECH HS </li>
-<li>ACERO - BRIGHTON PARK </li>
-<li>ACERO - CISNEROS </li>
-<li>ACERO - CLEMENTE </li>
-<li>ACERO - DE LA CRUZ </li>
-<li>ACERO - DE LAS CASAS </li>
-<li>ACERO - FUENTES </li>
+        
+        
+
+
+
 
 
 

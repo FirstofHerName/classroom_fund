@@ -1,1 +1,12 @@
-  <h1>School info:</h1>
+  <h1><a href= School info:></h1>
+
+  <h2>Name: <%= @school.name %></h2>
+  <p>Address: <%= @school.address %></p>
+
+
+  <% @school.classrooms.each do |classroom| %>
+    <%= link_to "#{classroom.teacher_name} - Room #{classroom.room_number}", "/classrooms/#{classroom.id}/" %>
+  <% end %>
+  
+
+
