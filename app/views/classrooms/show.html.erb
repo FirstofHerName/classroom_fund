@@ -1,1 +1,10 @@
-<h1>List of classrooms</h1>
+<h1>List of Projects</h1>
+
+<ul>
+  <% @classroom.projects.each do |project| %>
+    <li>
+      <%= link_to "#{project.name}" %>
+    </li>
+  <% end %>
+</ul>
+

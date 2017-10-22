@@ -21,6 +21,14 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
+  get '/classrooms/:classroom_id/projects' => 'projects#index'
+  get '/classrooms/:classroom_id/projects/new' => 'projects#new'
+  post '/classrooms/:classroom_id/projects' => 'projects#create'
+  get '/classrooms/:classroom_id/projects/:id' => 'projects#show'
+  get '/classrooms/:classroom_id/projects/:id/edit' => 'projects#edit'
+  patch '/classrooms/:classroom_id/projects/:id' => 'projects#update'
+  delete '/classrooms/:classroom_id/projects/:id' => 'projects#destroy'
   
 
 

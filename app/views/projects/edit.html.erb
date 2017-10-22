@@ -1,0 +1,20 @@
+<% if @errors %>
+
+<% @errors.each do |error| %>
+<h2><%= error %></h2>
+<% end %>
+<% end %>
+
+
+<h1>Edit your project</h1>
+
+<%= form_tag "/classrooms/#{@classroom.id}/projects/#{@project.id}", method: :patch do %>
+  <div>
+    Name: <input type="text" name="name" value="<%= @project.name %>">
+  </div>
+  <div>
+    Details: <input type="text" name="details" value="<%= @project.details %>">
+  </div>
+  <input type="hidden" name="classroom_id" value="<%= @classroom.id %>">
+  <input type="submit" value="Update school" class="btn btn-Changes Saved">
+  <% end %>

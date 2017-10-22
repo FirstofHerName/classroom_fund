@@ -1,0 +1,13 @@
+<h1>Add your classroom's project</h1>
+
+<%= form_tag "/classrooms/#{@classroom.id}/projects", method: "post" do %>
+  <div>
+    Name: <input type="text" name="name">
+  </div>
+  <div>
+    Details: <input type="text" name="details">
+  </div>
+  <input type="hidden" name="classroom_id" value="<%= @classroom.id %>">
+  
+  <input type="submit" class="btn btn-primary" value="Create New Project">
+<% end %>

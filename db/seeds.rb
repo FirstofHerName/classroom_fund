@@ -29,32 +29,125 @@
 # school.save
 
 
-classroom = Classroom.new(
-                          teacher_name: "Ms. A. Miller", 
-                          room_number: "106"
-                          )
-classroom.save
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. A. Miller", 
+#                           room_number: "106"
+#                           )
+# classroom.save
 
-classroom = Classroom.new(
-                          teacher_name: "Ms. B. Cody",
-                          room_number: "203"
-                          )
-classroom.save
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. B. Cody",
+#                           room_number: "203"
+#                           )
+# classroom.save
 
-classroom = Classroom.new(
-                          teacher_name: "Ms. C. Smith", 
-                          room_number: "306"
-                          )
-classroom.save
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. C. Smith", 
+#                           room_number: "306"
+#                           )
+# classroom.save
 
-classroom = Classroom.new(
-                          teacher_name: "Ms. D. Peck", 
-                          room_number: "120"
-                          )
-classroom.save
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. D. Peck", 
+#                           room_number: "120"
+#                           )
+# classroom.save
 
-classroom = Classroom.new(
-                          teacher_name: "Ms. F. Lower", 
-                          room_number: "205"
-                          )
-classroom.save
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. F. Lower", 
+#                           room_number: "205"
+#                           )
+# classroom.save
+# school_ids = School.pluck(:id)
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. L. Alvarez ", 
+#                           room_number: "407",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. T. Gonzalez", 
+#                           room_number: "208",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. H. Torres", 
+#                           room_number: "230",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. S. Anthony", 
+#                           room_number: "306",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. T. Hernandez", 
+#                           room_number: "2107",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. P. Spring", 
+#                           room_number: "305",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+# classroom = Classroom.new(
+#                           teacher_name: "Ms. L. Chance", 
+#                           room_number: "104",
+#                           school_id: school_ids.sample
+#                           )
+# classroom.save
+
+classroom_ids = Classroom.pluck(:id)
+
+project = Project.new(
+                      name: "Dry Erase Board",
+                      details: "Our class is in need of a new dry erase board."
+                      )
+project.save
+
+project = Project.new(
+                      name: "Storage bins",
+                      details: "We need storage for some of our supplies for each student in the class."
+                      )
+project.save
+
+project = Project.new(
+                      name: "Bluetooth speakers",
+                      details: "We would like to be able to listen to soft music while working on projects or having downtime."
+                      )
+project.save
+
+project = Project.new(
+                      name: "General Supplies",
+                      details: "We often run out of general supplies like colrox wipes, pen, pencils, markers, etc."
+                      )
+project.save
+
+project = Project.new(
+                      name: "Aquarium supplies",
+                      details: "We would like to have a small aquarium in our class. Things needed are aquarium, rocks, fishes, Thermometer, Nylon Net, Water test Vial, filter, etc"
+                      )
+project.save
+
+project = Project.new(
+                      name: "10 Volcanoes",
+                      details: "This is a group project. Each group will be making their own volcanoes and supplies is needed for each group, flour, salt, cooking oil, plastic soda bottles, dishwashing detergent, food coloring, vinegar ,baking dishes or pans."
+                      )
+project.save
+
+
+
+
+
