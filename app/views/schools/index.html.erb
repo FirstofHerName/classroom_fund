@@ -1,13 +1,11 @@
-
+<div class="container school-list-style"> 
   <h1>School List</h1>
 
-<% @schools.each do |school| %>
-  <h2>Name: <a href="/schools/<%= school.id %>"><%= school.name %></a></h2>
+    <% @schools.each do |school| %>
+      <h2>Name: <a href="/schools/<%= school.id %>"><%= school.name %></a></h2>
+    <% end %>
 
- <% end %>
-
-
-        
+</div>
         
 
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home - KIDZ SCHOOL</title>
+    <title>Home - Classroom Fund</title>
 
     <!-- PLUGINS CSS STYLE -->
     <link href="/plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
@@ -87,7 +87,7 @@
                       <option value="2">Spanish</option>
                     </select>
                   </li>
-                  <li><i class="fa fa-unlock-alt bg-color-5" aria-hidden="true"></i> <a href='#loginModal' data-toggle="modal" >Login</a><span>or</span><a href='#createAccount' data-toggle="modal">Create an account</a></li>
+                  <li><i class="fa fa-unlock-alt bg-color-5" aria-hidden="true"></i> <a href='/login' data-toggle="modal" >Login</a><span>or</span><a href='/signup' data-toggle="modal">Create an account</a></li>
                   <!-- <li class="cart-dropdown">
                     <a href="#" class="bg-color-6 shop-cart" >
                       <i class="fa fa-shopping-basket " aria-hidden="true"></i>
@@ -436,7 +436,7 @@
         </nav> -->
       </header>
 
-      <%= yield %>
+      
       <!-- BANNER -->
       <section class="bannercontainer bannercontainerV1">
         <div class="fullscreenbanner-container">
@@ -565,21 +565,21 @@
           <div class="container">
             <div class="row">
               <div class="col-sm-3">
-                <a href="#ourCourses" class="sectionLink bg-color-1" id="coursesLink">
+                <a href="/schools" class="sectionLink bg-color-1" id="schoolsLink">
                   <i class="fa fa-file-text-o linkIcon border-color-1" aria-hidden="true"></i>
                   <span class="linkText">Schools</span>
                   <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
                 </a>
               </div>
               <div class="col-sm-3">
-                <a href="#ourTeam" class="sectionLink bg-color-2" id="teamLink">
+                <a href="/classrooms" class="sectionLink bg-color-2" id="classroomsLink">
                   <i class="fa fa-calendar-o linkIcon border-color-2" aria-hidden="true"></i>
                   <span class="linkText">Classrooms</span>
                   <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
                 </a>
               </div>
               <div class="col-sm-3">
-                <a href="#ourGallery" class="sectionLink bg-color-3" id="galleryLink">
+                <a href="#" class="sectionLink bg-color-3" id="projectsLink">
                   <i class="fa fa-picture-o linkIcon border-color-3" aria-hidden="true"></i>
                   <span class="linkText">Projects</span>
                   <i class="fa fa-chevron-down locateArrow" aria-hidden="true"></i>
@@ -596,6 +596,7 @@
           </div>
         </div>
       </section>
+      <%= yield %>
 
       <!-- FEATURE SECTION -->
      <!--  <section class="mainContent full-width clearfix featureSection">
@@ -1417,7 +1418,7 @@
           <div class="panel-heading bg-color-1 border-color-1">
             <h3 class="panel-title">Login</h3>
           </div>
-          <div class="panel-body">
+          <!-- <div class="panel-body">
             <form action="#" method="POST" role="form">
               <div class="form-group formField">
                 <input type="text" class="form-control" placeholder="User name">
@@ -1431,7 +1432,7 @@
               <div class="form-group formField">
                 <p class="help-block"><a href="#">Forgot password?</a></p>
               </div>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
