@@ -19,19 +19,19 @@
 
             <div class="col-md-6 col-sm-5 col-xs-12">
               <div class="product-info">
-                <h1 class="product-title"><%= project.name %></h1>
-                <div class="price">
-                  <span>$50</span>
-                  <span><del>$60</del></span>
+                <h1 class="project-title"><%= project.name %></h1>
+                <div class="donation amount">
+                 <!--  <span>$50</span>
+                  <span><del>$60</del></span> -->
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                <div class="add-cart">
-                  <div class="count-input">
-                    <input class="quantity btn-primary" type="text" value="1">
-                    <a class="incr-btn incr-up" data-action="decrease" href="#"><i class="fa fa-caret-up" aria-hidden="true"></i></a>
-                    <a class="incr-btn incr-down" data-action="increase" href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
-                  </div>
-                  <a href="#" class="add-to-cart btn btn-primary">Add to Cart</a>
+                <p class="product-details"><%= project.details %></p>
+                <!-- <div class="add-cart"> -->
+                  <!-- <div class="count-input"> -->
+                    <!-- <input class="quantity btn-primary" type="text" value="1"> -->
+                   <!--  <a class="incr-btn incr-up" data-action="decrease" href="#"><i class="fa fa-caret-up" aria-hidden="true"></i></a> -->
+                    <!-- <a class="incr-btn incr-down" data-action="increase" href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a> -->
+                 <!--  </div> -->
+                  <a href="#" class="add-to-cart btn btn-primary">Donate</a>
                 </div>
 
               </div>
