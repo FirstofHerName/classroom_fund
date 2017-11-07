@@ -1,45 +1,44 @@
-<% @projects.each do |project| %>
+<div class="container school-list-style">
+  <% @projects.each do |project| %>
 
-  <h2>Project Name: <%= project.name %></h2>
-  <h4>Details: <%= project.details %></h4>
-  <a data-toggle="modal" href="#donation-modal-<%= project.id %>" class="btn-block"><i class="fa fa-eye" aria-hidden="true"></i>Donation</a>
+    <h2>Project Name: <%= project.name %></h2>
+    <h4>Details: <%= project.details %></h4>
+    <a data-toggle="modal" href="#donation-modal-<%= project.id %>" class="btn-block"><i class="fa fa-eye" aria-hidden="true"></i>Donation</a>
 
-  <!-- PRODUCT QUICK VIEW MODAL -->
-  <div class="modal fade quick-view" id="donation-modal-<%= project.id %>" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="container-fluid">
-          <div class="row">
+    <!-- PRODUCT QUICK VIEW MODAL -->
+    <div class="modal fade quick-view" id="donation-modal-<%= project.id %>" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container-fluid">
+            <div class="row">
 
-            <div class="col-md-6 col-sm-7 col-xs-12">
-              <div class="product-gallery text-center">
-                <img src="/img/single-product/preview01.jpg" alt="Product" class="img-responsive">
+              <div class="col-md-6 col-sm-7 col-xs-12">
+                <div class="product-gallery text-center">
+                  <img src="/img/single-product/preview01.jpg" alt="Product" class="img-responsive">
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-5 col-xs-12">
+                <div class="product-info">
+                  <h2 class="project-title"><%= project.name %></h2>
+                  <div class="donation amount">
+                   <!--  <span>$50</span>
+                    <span><del>$60</del></span> -->
+                  </div>
+                  <h4 class="product-details"><%= project.details %></h4>
+                  <!-- <div class="add-cart"> -->
+                    <!-- <div class="count-input"> -->
+                      <!-- <input class="quantity btn-primary" type="text" value="1"> -->
+                     <!--  <a class="incr-btn incr-up" data-action="decrease" href="#"><i class="fa fa-caret-up" aria-hidden="true"></i></a> -->
+                      <!-- <a class="incr-btn incr-down" data-action="increase" href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a> -->
+                   <!--  </div> -->
+                    <a href="#" class="add-to-cart btn btn-primary">Donate</a>
+                </div>
               </div>
             </div>
-
-            <div class="col-md-6 col-sm-5 col-xs-12">
-              <div class="product-info">
-                <h1 class="project-title"><%= project.name %></h1>
-                <div class="donation amount">
-                 <!--  <span>$50</span>
-                  <span><del>$60</del></span> -->
-                </div>
-                <p class="product-details"><%= project.details %></p>
-                <!-- <div class="add-cart"> -->
-                  <!-- <div class="count-input"> -->
-                    <!-- <input class="quantity btn-primary" type="text" value="1"> -->
-                   <!--  <a class="incr-btn incr-up" data-action="decrease" href="#"><i class="fa fa-caret-up" aria-hidden="true"></i></a> -->
-                    <!-- <a class="incr-btn incr-down" data-action="increase" href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a> -->
-                 <!--  </div> -->
-                  <a href="#" class="add-to-cart btn btn-primary">Donate</a>
-                </div>
-
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

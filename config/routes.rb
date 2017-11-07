@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get '/classrooms/:classroom_id/projects/:id/edit' => 'projects#edit'
   patch '/classrooms/:classroom_id/projects/:id' => 'projects#update'
   delete '/classrooms/:classroom_id/projects/:id' => 'projects#destroy'
+
+  
   
 
 
