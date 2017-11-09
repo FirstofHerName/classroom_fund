@@ -1,13 +1,15 @@
-<h2>Name: <%= @school.name %></h2>
-<p>Address: <%= @school.address %></p>
+<div class="container school-list-style" >
+  <h2>Name: <%= @school.name %></h2>
+  <h4>Address: <%= @school.address %></h4>
 
-<ul>
-  <% @school.classrooms.each do |classroom| %>
-    <li>
-      <%= link_to "#{classroom.teacher_name} - Room #{classroom.room_number}", "/classrooms/#{classroom.id}/projects" %>
-    </li>
-  <% end %>
-</ul>
+  <ul>
+    <% @school.classrooms.each do |classroom| %>
+      <li>
+        <%= link_to "#{classroom.teacher_name} - Room #{classroom.room_number}", "/classrooms/#{classroom.id}/projects" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
   
 
 

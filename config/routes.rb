@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get '/homepages' => 'homepages#index'
+
+
   get '/' => 'schools#index' 
   get '/schools' => 'schools#index'
   get '/schools/new' => 'schools#new'
@@ -22,6 +26,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+
+  #project routes
   get '/classrooms/:classroom_id/projects' => 'projects#index'
   get '/classrooms/:classroom_id/projects/new' => 'projects#new'
   post '/classrooms/:classroom_id/projects' => 'projects#create'
@@ -29,6 +35,8 @@ Rails.application.routes.draw do
   get '/classrooms/:classroom_id/projects/:id/edit' => 'projects#edit'
   patch '/classrooms/:classroom_id/projects/:id' => 'projects#update'
   delete '/classrooms/:classroom_id/projects/:id' => 'projects#destroy'
+
+  
 
   
   

@@ -1,6 +1,21 @@
 .school-list-style {
   padding-top: 25px; 
-  h2, h1, h4 {
+    
+    h2, h1, h4 {
     color: #8fbdd3;
     }
   }
+
+h2 {
+    text-transform: lowercase;
+    color: #8fbdd3
+}
+
+h2:first-letter {
+    text-transform: uppercase;
+    color: #8fbdd3
+}
+
+
+
+

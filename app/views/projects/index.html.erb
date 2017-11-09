@@ -3,7 +3,23 @@
 
     <h2>Project Name: <%= project.name %></h2>
     <h4>Details: <%= project.details %></h4>
-    <a data-toggle="modal" href="#donation-modal-<%= project.id %>" class="btn-block"><i class="fa fa-eye" aria-hidden="true"></i>Donation</a>
+    <a data-toggle="modal" href="#donation-modal-<%= project.id %>" class="btn-block"><i class="fa fa-eye" aria-hidden="true"></i>Donate Now</a>
+
+    <div class="dollartimes-pb" style="font-family: arial; width: 500px; box-sizing: border-box; clear:both;">
+      <div style="font-size:16px; overflow: hidden;" class="dollartimes-pb-title project-title"><%= project.name %>
+      </div>
+    <div>
+      <div class="dollartimes-pb-frame" title="$3,000 / 30% towards goal" style="border-radius: 5px; background-color: #ffffff;padding: 0px;border: 1px solid #000; height: 25px; margin: 2px 0 1px;">
+      <div class="dollartimes-pb-fill" style="width:30%; height: 100%; margin-top: 0px; background: repeating-linear-gradient(-45deg, rgba(61,133,198,1), rgba(61,133,198,1) 8px, rgba(61,133,198,0.8) 8px, rgba(61,133,198,0.8) 16px);">&nbsp;</div>
+      </div>
+      <span class="dollartimes-pb-caption" style="float: left; font-size: 12px;">$0</span>
+      <span class="dollartimes-pb-caption" style="float: right; font-size: 12px;">$10,000</span>
+    </div>
+    <div style="clear: both;"></div>
+      <div style="margin: 2px 0 0 0; text-align: right;">
+    <a href="http://www.dollartimes.com/on-your-site/progress-bar.htm?name=Total%20Collected%20to%20date%20by%20Classroom%20Fund&start=0&goal=10000&current=3000&color=3d85c6&unit=%24&unitposition=left&size=500" style="font-size: 10px;text-decoration:none;color:#bbb">Classroom Fund</a>
+      </div>
+    </div>
 
     <!-- PRODUCT QUICK VIEW MODAL -->
     <div class="modal fade quick-view" id="donation-modal-<%= project.id %>" tabindex="-1" role="dialog">
@@ -32,7 +48,7 @@
                      <!--  <a class="incr-btn incr-up" data-action="decrease" href="#"><i class="fa fa-caret-up" aria-hidden="true"></i></a> -->
                       <!-- <a class="incr-btn incr-down" data-action="increase" href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a> -->
                    <!--  </div> -->
-                    <a href="#" class="add-to-cart btn btn-primary">Donate</a>
+                    <a href="https://www.amazon.com" class="add-to-cart btn btn-primary">Donate</a>
                 </div>
               </div>
             </div>
