@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+
+  before_action :authenticate_admin!, only: [:new, :create, :edit, :update, :destroy]
+
    def index
     classroom_id = params[:classroom_id]
     @projects = Project.where(classroom_id: classroom_id)

@@ -1,10 +1,12 @@
-<h1>Login</h1>
-<%= form_tag "/login", method: :post do %>
-  <div>
-    Email: <input type="text" name="email">
-  </div>
-  <div>
-    Password: <input type="password" name="password">
-  </div>
-  <input type="submit" value="Log In">
-<% end %>
+<div class="container school-list-style"> 
+  <h1>Login</h1>
+  <%= form_tag "/login", method: :post do %>
+    <div>
+      Email: <input type="text" name="email">
+    </div>
+    <div>
+      Password: <input type="password" name="password">
+    </div>
+    <input type="submit" value="Log In">
+  <% end %>
+</div>

@@ -1,0 +1,14 @@
+<div class="container school-list-style"> 
+  <h1>Schools: </h1>
+  <% @schools.each do |school| %>
+    <h2>Name: <a href="/schools/<%= school.id %>"><%= school.name %></a></h2>
+  <% end %>
+
+  <h3> or </h3>
+
+  <h1>Classrooms: </h1>
+  <% @classrooms.each do |classroom| %>
+    <h2>Teacher Name: <a href="/classrooms/<%= classroom.id %>/projects"><%= classroom.teacher_name %></a></h2>
+  <% end %>
+
+</div>

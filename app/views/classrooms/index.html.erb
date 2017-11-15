@@ -3,6 +3,36 @@
     <% @classrooms.each do |classroom| %>
     <h2>Teacher Name: <a href="/classrooms/<%= classroom.id %>/projects"><%= classroom.teacher_name %></a></h2>
   <% end %>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<% if current_user && current_user.admin %>
+
+
+  <h1>Add a your classroom</h1>
+
+<%= form_tag "/classrooms", method: "post" do %>
+  <div>
+    Teacher Name: <input type="text" name="teacher_name">
+  </div>
+  <div>
+    Room Number: <input type="text" name="room_number">
+  </div>
+  
+  <input type="submit" class="btn btn-success" value="Create New Classroom">
+<% end %>
+
+<% end %>
+
 </div>
   
   

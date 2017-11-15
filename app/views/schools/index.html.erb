@@ -5,13 +5,37 @@
       <h2>Name: <a href="/schools/<%= school.id %>"><%= school.name %></a></h2>
     <% end %>
 
-</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
         
 
 
+<% if current_user && current_user.admin %>
 
+<h1>Add your school</h1>
 
+<%= form_tag "/schools", method: "post" do %>
+  <div>
+    Name: <input type="text" name="name">
+  </div>
+  <div>
+    Address: <input type="text" name="address">
+  </div>
+  
+  <input type="submit" class="btn btn-primary" value="Create New School">
+<% end %>
 
+<% end %>
+
+</div>
 
 
 

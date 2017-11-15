@@ -70,23 +70,30 @@
         <div class="top-info-bar bg-color-7 hidden-xs">
           <div class="container">
             <div class="row">
+
               <div class="col-sm-7">
                 <ul class="list-inline topList">
-                  <li><i class="fa fa-envelope bg-color-1" aria-hidden="true"></i> <a href="mailto:classroomfund@gmail.com">classroomfund@gmail.com</a></li>
+
+                  <%= form_tag '/results', method: :get do %>
+                    <%= text_field_tag :search, nil, placeholder: "Search" %>
+                    <%= submit_tag "Search" %>
+                  <% end %>
+                 <!--  <li><i class="fa fa-envelope bg-color-1" aria-hidden="true"></i>  -->
+                    <!-- <a href="mailto:classroomfund@gmail.com">classroomfund@gmail.com</a></li> -->
                   <!-- <li><i class="fa fa-phone bg-color-2" aria-hidden="true"></i> +1 234 567 8900</li>
                   <li><i class="fa fa-clock-o bg-color-6" aria-hidden="true"></i> Open: 9am - 6pm</li> -->
                 </ul>
               </div>
               <div class="col-sm-5">
                 <ul class="list-inline functionList">
-                  <li><i class="fa fa-globe bg-color-4" aria-hidden="true"></i></li>
-                  <li class="LanguageList">
+                 <!--  <li><i class="fa fa-globe bg-color-4" aria-hidden="true"></i></li> -->
+                  <!-- <li class="LanguageList">
                     <select name="guiest_id1" id="guiest_id1" class="select-drop">
                       <option value="0"><i class="fa fa-globe bg-color-4" aria-hidden="true"></i> Language</option>
                       <option value="1">English</option>
                       <option value="2">Spanish</option>
                     </select>
-                  </li>
+                  </li> -->
                   <li><i class="fa fa-unlock-alt bg-color-5" aria-hidden="true"></i> <a href='/login' data-toggle="modal" >Login</a><span>or</span><a href='/signup' data-toggle="modal">Create an account</a></li>
                   <!-- <li class="cart-dropdown">
                     <a href="#" class="bg-color-6 shop-cart" >
@@ -185,28 +192,35 @@
                   </a>
                   <ul class="dropdown-menu dropdown-menu-left">
                     <li class=" active "><a href='/homepages'>Main</a></li>
-                   <!--  <li class=""><a href="index-v2.html">Kidz Store</a></li>
-                    <li class=""><a href="index-v3.html">Kidz Daycare</a></li>
+                    <li class="divider"></li>
+                    <li class=" dropdown singleDrop color-1   active "><a href="/logout">Logout</a></li>
+                    <!-- <li class=""><a href="index-v3.html">Kidz Daycare</a></li>
                     <li class=""><a href="index-v4.html">Kidz Fashion</a></li> -->
                   </ul>
+
                 </li>
-                <!-- <li class="dropdown singleDrop color-3 ">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-list-ul bg-color-3" aria-hidden="true"></i> <span>Pages</span></a>
+                <% if current_user && current_user.admin %>
+                <li class="dropdown singleDrop color-3 ">
+                  <a href="javascript:void(0)" class="dropdown-toggle singleDrop color-3" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-list-ul bg-color-3" aria-hidden="true singleDrop color-3"></i> <span>Admin</span>
+                  </a>
                   <ul class="dropdown-menu dropdown-menu-left">
-                    <li class=" "><a href="about_us.html">About</a></li>
                     <li class="dropdown dropdown-submenu ">
-                      <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Team
+                      <a href="javascript:void(0)" class="dropdown-toggle singleDrop color-3" data-toggle="dropdown">Add Project
                       </a>
                       <ul class="dropdown-menu">
-                        <li class=" "><a href="teachers.html">Teachers</a></li>
-                        <li class=" "><a href="teachers-details.html">Teacher Details</a></li>
+                      <% current_user.classrooms.each do |classroom| %>
+                        <li class=" "><a href="/classrooms/<%= classroom.id %>/projects/new"><%= classroom.school.name.split().first %> - Room: <%= classroom.room_number %></a></li>
+                      <% end %>
                       </ul>
                     </li>
-                    <li class=" "><a href="testimonial.html">Testimonial</a></li>
-                    <li class="dropdown dropdown-submenu
-                       ||
+                    <!-- <li class=" "><a href="testimonial.html">Testimonial</a></li>
+                    <li class="dropdown dropdown-submenu -->
+                    <!--    ||
                        ||
                        "> -->
+                <% end %>
+
                      <!--  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Events 
                       </a>
                       <ul class="dropdown-menu">
@@ -215,11 +229,11 @@
                         <li class=""><a href="single-event-right-sidebar.html">Single Event Right Sidebar</a></li>
                       </ul>
                     </li> -->
-                   <!--  <li class=""><a href="photo-gallery.html">Photo Gallery</a></li>
+                    <!-- <li class=""><a href="photo-gallery.html">Photo Gallery</a></li>
                     <li class=""><a href="pricing-table.html">Pricing Table</a></li>
                     <li class=""><a href="services.html">Services</a></li>
-                    <li class=""><a href="service-details.html">Services Details</a></li>
-                    <li class=""><a href="search-result.html">Search Results</a></li>
+                    <li class=""><a href="service-details.html">Services Details</a></li> -->
+                 <!--    <li class=""><a href="search-result.html">Search Results</a></li>
                     <li class=""><a href="contact-us.html">Contact Us</a></li>
                     <li class=""><a href="faq.html">FAQ</a></li>
                     <li class=""><a href="sign-up-or-login.html">Sign Up / Login</a></li>
@@ -434,6 +448,7 @@
             </div>
           </div>
         </nav> -->
+
       </header>
 
       

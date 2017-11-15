@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   get '/homepages' => 'homepages#index'
 
+  get '/teachers' => 'teachers#index'
+
+  get '/results' => 'results#index'
+
 
   get '/' => 'schools#index' 
   get '/schools' => 'schools#index'
